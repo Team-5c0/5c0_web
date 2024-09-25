@@ -1,8 +1,8 @@
 import React from "react";
 
-const NumBtn=()=>{
+const NumBtn=(num)=>{
     return(
-        <div></div>
+        <div>{num}</div>
     )
 }
 
