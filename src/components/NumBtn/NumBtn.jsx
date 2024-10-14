@@ -1,5 +1,5 @@
 import React from "react";
-import * as style from "./index"
+import * as style from "./style"
 
 const NumBtn=(num)=>{
     
