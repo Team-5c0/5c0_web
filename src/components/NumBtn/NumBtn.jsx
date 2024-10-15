@@ -1,10 +1,10 @@
 import React from "react";
-import * as style from "./style"
+import * as S from "./styles"
 
 const NumBtn=(num)=>{
     
     return(
-        <div>{num}</div>
+        <S.NumBtn>{num}</S.NumBtn>
     )
 }
 

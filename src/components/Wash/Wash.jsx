@@ -1,8 +1,9 @@
 import React from "react";
+import * as S from './styles';
 
-const Wash=()=>{
+const Wash=(num)=>{
     return(
-        <div></div>
+        <S.Container>{num}</S.Container>
     )
 }
 
