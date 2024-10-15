@@ -2,30 +2,25 @@ import React from "react";
 import * as S from "./styles";
 
 const WashRoom = () => {
-
-//   fetch('https://api.example.com/data', {
-//   method: 'GET'
-// })
-//   .then(response => response.json())
-//   .then(data => {
-//     console.log(data);
-//   })
-//   .catch(error => {
-//     console.log('Error:', error);
-//   });
-const txt = [
-  {num :1},
-  {num :2},
-  {num : 3},
-  {num : 4},
-  {num : 5},
-  {num : 6},
-  {num : 7}
-]
+  const room = [
+    { id: 1 },
+    { id: 2 },
+    { id: 3 },
+    { id: 4 },
+    { id: 5 },
+    { id: 6 },
+    { id: 7 },
+  ];
   return (
     <>
       <S.All>
-        <S.Box></S.Box>
+        {room.map((room) => {
+          return (
+            <>
+              <S.Box>{room.id}</S.Box>
+            </>
+          );
+        })}
       </S.All>
     </>
   );
