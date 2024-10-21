@@ -1,6 +1,5 @@
 import React from "react";
 import * as S from './styles';
-import '../../App.css'
 // import {GlobalStyle} from "../../../public/index";
 import {useNavigate} from "react-router-dom";
 
@@ -10,9 +9,8 @@ const Wash=({text})=>{
     const next = () => {navigate('/main/time');
 }
     return(
-
-        <S.Container>
-            <S.Textbox onClick={next}>
+        <S.Container onClick={next}>
+            <S.Textbox>
                 {text}
             </S.Textbox>
         </S.Container>
