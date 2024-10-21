@@ -18,7 +18,7 @@ export const Textbox = styled.div`
     
 `
 export const TextBoxText = styled.span`
-    font-family: "Pretendard-Medium";
+    font-family: "Pretendard-Medium",sans-serif;
     width: 100%;
     font-size: 3vw;
     text-align: center;
