@@ -15,7 +15,6 @@ const Router = () => {
                 <Route path="/Name" element={<NamePage />} />
                 <Route path="/End" element={<EndPage />} />
                 <Route path="/admin" element={<AdminPage />} />
-
             </Routes>
         </BrowserRouter>
     );

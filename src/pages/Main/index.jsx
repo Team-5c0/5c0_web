@@ -3,6 +3,7 @@ import * as S from './styles';
 import Wash from "../../components/Wash/Wash";
 
 
+
 const MainPage = () => {
 
     return (
