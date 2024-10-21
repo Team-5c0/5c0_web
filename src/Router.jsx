@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import AdminPage from "./pages/Admin";
 import MainPage from "./pages/Main";
 import TimePage from "./pages/Check/Time";
 import NamePage from "./pages/Check/Name";
@@ -14,7 +13,11 @@ const Router = () => {
                 <Route path="/time" element={<TimePage />} />
                 <Route path="/Name" element={<NamePage />} />
                 <Route path="/End" element={<EndPage />} />
+<<<<<<< Updated upstream
                 <Route path="/admin" element={<AdminPage />} />
+=======
+
+>>>>>>> Stashed changes
             </Routes>
         </BrowserRouter>
     );

@@ -26,7 +26,6 @@ const TimePage = () => {
         }
         setText(data);
     }
-    // const
 
     return (
         <S.Wrapper>
