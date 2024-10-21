@@ -8,9 +8,6 @@ import {useNavigate} from "react-router-dom";
 const TimePage = () => {
     const [text, setText] = useState("");
     const navigate = useNavigate();
-    const next = () => {
-        navigate("/Name");
-    }
     const Texting = (e) => {
         let data = text + e
         console.log(data.length)
@@ -23,6 +20,7 @@ const TimePage = () => {
         }
         if(e === 'enter') {
             const time = Number(text)
+            navigate('/Name')
         }
         setText(data);
     }

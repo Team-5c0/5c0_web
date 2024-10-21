@@ -6,7 +6,7 @@ import {useNavigate} from "react-router-dom";
 
 const Wash=({text})=>{
     const navigate = useNavigate()
-    const next = () => {navigate('/main/time');
+    const next = () => {navigate('/time');
 }
     return(
         <S.Container onClick={next}>
