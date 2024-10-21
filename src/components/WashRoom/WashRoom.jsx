@@ -3,7 +3,7 @@ import * as S from "./styles";
 
 const WashRoom = () => {
   const room = [
-    { id: 1 },
+    { id: 1},
     { id: 2 },
     { id: 3 },
     { id: 4 },
