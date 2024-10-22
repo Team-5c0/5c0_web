@@ -11,10 +11,19 @@ export const Wrapper = styled.div`
 `
 export const Textbox = styled.div`
     border: #000000 1px solid;
+    background: #FFFFFF;
+    color: #000000;
     border-radius: 10px;
-    padding: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
+    padding: 1.5%;
+    margin-left: 1%;
+    margin-right: 1%;
+    
+    &:active {
+        background: #000000;
+        color: #FFFFFF;
+        
+    }
+    
     
 `
 export const TextBoxText = styled.span`
@@ -22,4 +31,5 @@ export const TextBoxText = styled.span`
     width: 100%;
     font-size: 3vw;
     text-align: center;
+    user-select: none;
 `
