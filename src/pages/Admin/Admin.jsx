@@ -8,9 +8,13 @@ const AdminPage = () => {
   const navigate = useNavigate()
   return (
     <>
-      <S.Font>세탁실</S.Font>
+      <S.Container>
+      <S.Wrap>
+      <S.Font className="active">세탁실</S.Font>
       <WashRoom />
       <S.Font onClick={()=> navigate('/')}>confirm</S.Font>
+      </S.Wrap>
+      </S.Container>
     </>
   );
 };

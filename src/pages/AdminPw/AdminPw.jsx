@@ -18,7 +18,7 @@ const AdminPw = () => {
     if (e === "clear") {
       data = "";
     }
-    if (data.length > 4) {
+    if (data.length > 4) {                      
       data = text;
     }
     if (e === "enter") {
@@ -36,11 +36,13 @@ const AdminPw = () => {
   return (
     <>
       <S.Wrapper>
+      <S.Container>
         <S.AdPw>비밀번호</S.AdPw>
         <S.InputBox>
           <S.InputBoxText>{text}</S.InputBoxText>
         </S.InputBox>
         <NumBtn setText={Texting} />
+    </S.Container>
       </S.Wrapper>
     </>
   );
