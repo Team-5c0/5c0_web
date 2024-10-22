@@ -4,6 +4,7 @@ import MainPage from "./pages/Main";
 import TimePage from "./pages/Check/Time";
 import NamePage from "./pages/Check/Name";
 import EndPage from "./pages/Check/End";
+import AdminPage from "./pages/Admin";
 
 const Router = () => {
     return (
