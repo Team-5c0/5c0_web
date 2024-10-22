@@ -8,7 +8,6 @@ const Num = ({btnText,setText})=>{
         </S.Textbox>
     )
 }
-
 const NumBtn=({setText})=>{
 
     return(

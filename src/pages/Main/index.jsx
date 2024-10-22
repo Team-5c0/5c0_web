@@ -2,6 +2,7 @@ import React from 'react';
 import * as S from './styles';
 import Wash from "../../components/Wash/Wash";
 import {useNavigate} from "react-router-dom";
+import NumPad from "../../components/NumPad/NumPad";
 
 
 
@@ -10,6 +11,7 @@ const MainPage = () => {
     return (
     <S.Wrapper>
         <S.Title onClick={() => {navigate('/adminPW')}}>세탁기 선택</S.Title>
+        <NumPad/>
         <S.Container>
             <Wash text='1' />
             <Wash text='2' />

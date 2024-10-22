@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import * as S from "./styles";
 import {useNavigate} from "react-router-dom";
 import NumBtn from "../../../components/NumBtn/NumBtn";
+import NumDsp from "../../../components/NumDsp/NumDsp";
 
 const NamePage = () => {
     const [text, setText] = useState("(학번으로 입력)");
@@ -35,11 +36,7 @@ const NamePage = () => {
                 <S.Text>
                     자신의 학번 입력
                 </S.Text>
-                <S.InputBox>
-                    <S.InputBoxText>
-                        {text}
-                    </S.InputBoxText>
-                </S.InputBox>
+                <NumDsp text={text}/>
                 <NumBtn setText={Texting}/>
             </S.Container>
         </S.Wrapper>

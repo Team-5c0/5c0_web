@@ -1,6 +1,7 @@
 import React from "react";
 import * as S from "./styles";
 import NumBtn from "../../../components/NumBtn/NumBtn";
+import NumDsp from "../../../components/NumDsp/NumDsp";
 import {useState} from "react";
 import {useNavigate} from "react-router-dom";
 
@@ -30,18 +31,13 @@ const TimePage = () => {
         }
         setText(data);
     }
-
     return (
         <S.Wrapper>
             <S.Container>
                 <S.Text>
                     세탁기 사용할 시간
                 </S.Text>
-                <S.InputBox>
-                    <S.InputBoxText>
-                        {text}
-                    </S.InputBoxText>
-                </S.InputBox>
+                <NumDsp text={text}/>
                 <NumBtn setText={Texting}/>
             </S.Container>
         </S.Wrapper>
