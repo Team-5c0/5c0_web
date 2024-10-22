@@ -4,11 +4,8 @@ import {useNavigate} from "react-router-dom";
 import NumBtn from "../../../components/NumBtn/NumBtn";
 
 const NamePage = () => {
-    const [text, setText] = useState("");
+    const [text, setText] = useState("(학번으로 입력)");
     const navigate = useNavigate();
-    const next = () => {
-        navigate("/Name");
-    }
     const Texting = (e) => {
         let data = text + e
         console.log(data.length)
@@ -19,20 +16,32 @@ const NamePage = () => {
         if (data.length > 4) {
             data = text
         }
-        if(e === 'enter') {
-            const time = Number(text)
+        if (data.length === 0) {
+            data = '(학번으로 입력)'
+        }
+        else if (data === '(학번으로 입력)') {
+            data = e==='enter' ? '(학번으로 입력)' : e
+        }
+        if(e === 'enter' && text.length === 4) {
+            const name = Number(text)
+            navigate("/end");
         }
         setText(data);
     }
 
     return (
         <S.Wrapper>
-            <S.InputBox>
-                <S.InputBoxText>
-                    {text}
-                </S.InputBoxText>
-            </S.InputBox>
-            <NumBtn setText={Texting}/>
+            <S.Container>
+                <S.Text>
+                    자신의 학번 입력
+                </S.Text>
+                <S.InputBox>
+                    <S.InputBoxText>
+                        {text}
+                    </S.InputBoxText>
+                </S.InputBox>
+                <NumBtn setText={Texting}/>
+            </S.Container>
         </S.Wrapper>
     )
 }

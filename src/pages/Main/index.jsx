@@ -8,8 +8,8 @@ import {useNavigate} from "react-router-dom";
 const MainPage = () => {
     const navigate = useNavigate()
     return (
-    <>
-        <h1 onClick={() => {navigate('/time')}}>세탁기 선택</h1>
+    <S.Wrapper>
+        <S.Title onClick={() => {navigate('/adminPW')}}>세탁기 선택</S.Title>
         <S.Container>
             <Wash text='1' />
             <Wash text='2' />
@@ -17,7 +17,7 @@ const MainPage = () => {
             <Wash text='4' />
             <Wash text='5' />
         </S.Container>
-    </>
+    </S.Wrapper>
     )
 }
 export default MainPage;
