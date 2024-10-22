@@ -13,11 +13,7 @@ const Router = () => {
                 <Route path="/time" element={<TimePage />} />
                 <Route path="/Name" element={<NamePage />} />
                 <Route path="/End" element={<EndPage />} />
-<<<<<<< Updated upstream
                 <Route path="/admin" element={<AdminPage />} />
-=======
-
->>>>>>> Stashed changes
             </Routes>
         </BrowserRouter>
     );

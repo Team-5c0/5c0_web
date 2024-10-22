@@ -1,7 +1,6 @@
 import React from "react";
 import * as S from "./styles";
 import WashRoom from "../../components/WashRoom/WashRoom";
-import "../../";
 
 const AdminPage = () => {
   return (
