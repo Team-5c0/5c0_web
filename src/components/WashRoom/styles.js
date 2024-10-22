@@ -15,4 +15,8 @@ export const Box = styled.div`
   justify-content: center;
   align-items: center;
   font-size: 2em;
+
+  &.active{
+    background-color: green;
+  }
 `;
