@@ -4,7 +4,7 @@ export const Container = styled.div`
     width: 100%;
     height: 10vw;
     border: #000000 1px solid;
-    background-color: ${({available}) => available === true ? '#67a56f' : 'red'};
+    background-color: indianred;
     color: #000000;
     border-radius: 10px;
     display: flex;
@@ -13,6 +13,9 @@ export const Container = styled.div`
     &:active {
         background-color: #000000;
         color: #ffffff;
+    }
+    &.available {
+        background-color: #67a56f;
     }
 
 
