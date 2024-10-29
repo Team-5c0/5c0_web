@@ -9,7 +9,6 @@ const NamePage = () => {
     const navigate = useNavigate();
     const Texting = (e) => {
         let data = text + e
-        console.log(data.length)
 
         if (e === 'clear') {
             data = ''
@@ -24,7 +23,7 @@ const NamePage = () => {
             data = e==='enter' ? '(학번으로 입력)' : e
         }
         if(e === 'enter' && text.length === 4) {
-            const name = Number(text)
+            localStorage.setItem('userId',text)
             navigate("/end");
         }
         setText(data);

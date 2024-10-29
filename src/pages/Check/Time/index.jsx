@@ -11,7 +11,6 @@ const TimePage = () => {
     const navigate = useNavigate();
     const Texting = (e) => {
         let data = text + e
-        console.log(text)
 
         if (e === 'clear') {
             data = ''
@@ -25,8 +24,8 @@ const TimePage = () => {
         else if (data === '(분 단위로 입력)') {
             data = e==='enter' ? '(분 단위로 입력)' : e
         }
-        if(e === 'enter' && text !== '(분 단위로 입력)' && text !=='0') {
-            const time = Number(text)
+        if(e === 'enter' && text !== '(분 단위로 입력)' && Number(text) !== 0) {
+            localStorage.setItem('washMinutes',text)
             navigate("/name");
         }
         setText(data);
