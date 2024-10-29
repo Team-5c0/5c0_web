@@ -34,6 +34,7 @@ const MainPage = () => {
         return () => clearInterval(intervalId);
     }, []);
 
+
     return (
         <S.Wrapper>
             <S.Title onClick={() => {
