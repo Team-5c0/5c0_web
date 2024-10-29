@@ -15,7 +15,7 @@ const MainPage = () => {
         const roomId = 1
         const fetchData = async () => {
             try {
-                const response = await axios.get(`${process.env.REACT_APP_API_URL}/wash/washers`, {
+                const response = await axios.get(`/wash/washers`, {
                     params: {roomid: roomId}
                 });
                 setWashers([response.data])
@@ -28,6 +28,7 @@ const MainPage = () => {
 
         fetchData();
     }, [])
+
 
     return (
         <S.Wrapper>

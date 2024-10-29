@@ -2,17 +2,7 @@ import React from "react";
 import * as S from "./styles";
 import { useState } from "react";
 
-const WashRoom = () => {
-  const room = [
-    { id: 1 },
-    { id: 2 },
-    { id: 3 },
-    { id: 4 },
-    { id: 5 },
-    { id: 6 },
-    { id: 7 },
-  ];
-
+const WashRoom = ({ room }) => {
   const [activeStates, setActiveStates] = useState(
     Array(room.length).fill(false)
   );
@@ -26,19 +16,15 @@ const WashRoom = () => {
   return (
     <>
       <S.All>
-        {room.map((el, index) => {
-          return (
-            <>
-              <S.Box
-              key={el.id}
-                className={activeStates[index] ? "active" : ""}
-                onClick={() => handleClick(index)}
-              >
-                {el.id}
-              </S.Box>
-            </>
-          );
-        })}
+        {room.map((el, index) => (
+          <S.Box
+            key={index}
+            className={activeStates[index] ? "active" : ""}
+            onClick={() => handleClick(index)}
+          >
+            {el.roomid}
+          </S.Box>
+        ))}
       </S.All>
     </>
   );
