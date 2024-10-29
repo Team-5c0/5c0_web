@@ -9,13 +9,17 @@ const EndPage = () => {
     const userId = localStorage.getItem("userId");
     const washMinutes = localStorage.getItem("washMinutes");
 
+    // console.log(washerId,washMinutes);
+
     useEffect(() => {
-        axios.post(`${process.env.REACT_APP_API_URL}/wash/usewashers`,{
+        axios.post(`/wash/usewasher`,null,{
             params: {
                 washerId: washerId,
                 userId: userId,
                 washMinutes: washMinutes,
             }
+        }).then(res => {
+            console.log(res);
         }).catch(error => {
             console.log(error);
         })
