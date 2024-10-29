@@ -4,14 +4,20 @@ import * as S from './styles';
 import {useNavigate} from "react-router-dom";
 
 
-const Wash=({text})=>{
-    const navigate = useNavigate()
-    const next = () => {navigate('/time');
-}
+const Wash=({values})=>{
+    const setWasher = (Id)=>{
+        localStorage.setItem("washerId",Id);
+    };
+    const navigate = useNavigate();
+
     return(
-        <S.Container onClick={next}>
+        <S.Container available={values.available} onClick={()=>{
+            setWasher(values.washerId);
+            navigate('/time');}}>
             <S.Textbox>
-                {text}
+                {values.washerId}
+                <br/>
+                {values.washerType}
             </S.Textbox>
         </S.Container>
     )

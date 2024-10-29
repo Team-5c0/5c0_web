@@ -2,13 +2,13 @@ import React, {useState} from "react";
 import * as S from "./styles";
 import {useNavigate} from "react-router-dom";
 import NumBtn from "../../../components/NumBtn/NumBtn";
+import NumDsp from "../../../components/NumDsp/NumDsp";
 
 const NamePage = () => {
     const [text, setText] = useState("(학번으로 입력)");
     const navigate = useNavigate();
     const Texting = (e) => {
         let data = text + e
-        console.log(data.length)
 
         if (e === 'clear') {
             data = ''
@@ -23,7 +23,7 @@ const NamePage = () => {
             data = e==='enter' ? '(학번으로 입력)' : e
         }
         if(e === 'enter' && text.length === 4) {
-            const name = Number(text)
+            localStorage.setItem('userId',text)
             navigate("/end");
         }
         setText(data);
@@ -35,11 +35,7 @@ const NamePage = () => {
                 <S.Text>
                     자신의 학번 입력
                 </S.Text>
-                <S.InputBox>
-                    <S.InputBoxText>
-                        {text}
-                    </S.InputBoxText>
-                </S.InputBox>
+                <NumDsp text={text}/>
                 <NumBtn setText={Texting}/>
             </S.Container>
         </S.Wrapper>

@@ -12,7 +12,6 @@ export const Container = styled.div`
     margin: 10px;
 `
 export const InputBox = styled.div`
-
     border: 1px solid #000000;
     padding: 5%;
     text-align: center;
