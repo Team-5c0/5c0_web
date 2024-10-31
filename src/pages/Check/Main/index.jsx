@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import * as S from './styles';
-import Wash from "../../components/Wash/Wash";
+import Wash from "../../../components/Wash/Wash";
 import {useNavigate} from "react-router-dom";
 
 
