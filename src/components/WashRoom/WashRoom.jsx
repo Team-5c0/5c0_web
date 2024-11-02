@@ -7,9 +7,10 @@ const WashRoom = ({ room }) => {
 
   const handleClick = (roomid) => {
     const isSelected = state.includes(roomid); //배열의 항목에 특정 값이 포함되어 있는지를 판단 state.includes
+    //포함되어 있으면 선택 해제 (배열에서 제거), 그렇지 않으면 배열에 추가
     const updatedState = isSelected //선택된 roomid를 updatedState에 포함시킨다
-      ? state.filter((id) => id !== roomid) //
-      : [...state, roomid];
+      ? state.filter((id) => id !== roomid) //선택 해제할 때 roomid를 제외한 새로운 배열 생성
+      : [...state, roomid]; //선택할 때: 기존 배열에 roomid추가
 
     // 상태 업데이트
     setState(updatedState);
