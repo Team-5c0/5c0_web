@@ -4,21 +4,20 @@ export const Container = styled.div`
     width: 100%;
     height: 10vw;
     border: #000000 1px solid;
-    background-color: indianred;
+    background-color: rgba(205, 92, 92, 0.75);
     color: #000000;
     border-radius: 10px;
     display: flex;
     align-items: center;
+    &.available {
+        background-color: rgba(103, 165, 111, 0.75);
+    }
 
     &:active {
-        background-color: #000000;
+        background-color: rgba(0, 0, 0, 0.5);
         color: #ffffff;
     }
-    &.available {
-        background-color: #67a56f;
-    }
-
-
+    
 `
 export const Textbox = styled.span`
     font-family: "Pretendard-Medium",sans-serif;

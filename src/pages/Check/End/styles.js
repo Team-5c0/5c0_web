@@ -6,6 +6,7 @@ export const Wrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: linear-gradient(-45deg, #f5d1c1, #d1bed7);
 `
 export const Content = styled.div`
     font-family: Pretendard-Medium, sans-serif;
