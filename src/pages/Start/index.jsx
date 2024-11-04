@@ -13,12 +13,14 @@ const StartPage = () => {
                 <s.Title>
                     안녕하세요 👋
                 </s.Title>
+
                 <s.Button onClick={go}>
                     <s.ButtonText>
                         시작하기
                     </s.ButtonText>
                 </s.Button>
             </s.ContainerTitle>
+            <s.Circle3/>
         </s.Wrapper>
     )
 }
