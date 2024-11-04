@@ -11,18 +11,14 @@ const AdminPage = () => {
   const [roomNum, setRoom] = useState([]);
 
   useEffect(() => {
-    const roomId = localStorage.getItem("roomId");
     const roomData = async () => {
       try {
-        const response = await axios.get(`/wash/rooms`, {
-          params: { roomid: roomId },
-        });
+        const response = await axios.get(`/wash/rooms`);
         setRoom(response.data);
       } catch (error) {
         console.log(error);
       }
     };
-
     roomData();
   }, []);
 
