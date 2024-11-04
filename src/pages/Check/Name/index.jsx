@@ -1,46 +1,24 @@
-import React, {useState} from "react";
-import * as S from "./styles";
-import {useNavigate} from "react-router-dom";
-import NumBtn from "../../../components/NumBtn/NumBtn";
-import NumDsp from "../../../components/NumDsp/NumDsp";
+import React from "react";
+import * as S from "./style";
+import useText from "../../../hooks/useText";
+import NumPad from "../../../components/NumPad";
+import Step from "../../../components/Step";
+
 
 const NamePage = () => {
-    const [text, setText] = useState("(학번으로 입력)");
-    const navigate = useNavigate();
-    const Texting = (e) => {
-        let data = text + e
-
-        if (e === 'clear') {
-            data = ''
-        }
-        if (data.length > 4) {
-            data = text
-        }
-        if (data.length === 0) {
-            data = '(학번으로 입력)'
-        }
-        else if (data === '(학번으로 입력)') {
-            data = e==='enter' ? '(학번으로 입력)' : e
-        }
-        if(e === 'enter' && text.length === 4) {
-            localStorage.setItem('userId',text)
-            navigate("/end");
-        }
-        setText(data);
-    }
-
+    const text = useText('(학번으로 입력)',4, '/end', 'userId');
     return (
         <S.Wrapper>
-            <S.Container>
+            <S.ContentContainer>
+                <Step step={3}/>
                 <S.Text>
                     자신의 학번 입력
                 </S.Text>
-                <NumDsp text={text}/>
-                <NumBtn setText={Texting}/>
-            </S.Container>
+            </S.ContentContainer>
+            <S.NumPadContainer>
+                <NumPad value={text.text} setValue={text.texting} length={text.length}/>
+            </S.NumPadContainer>
         </S.Wrapper>
     )
 }
 export default NamePage;
-
-// }

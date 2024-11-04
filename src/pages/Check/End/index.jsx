@@ -23,7 +23,7 @@ const EndPage = () => {
         }).catch(error => {
             console.log(error);
         })
-    }, []);
+    });
 
     useEffect(() => {
         const timer = setTimeout(() => {

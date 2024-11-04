@@ -1,11 +1,13 @@
 import React from "react";
-import * as S from './styles';
+import * as S from './style';
 // import {GlobalStyle} from "../../../public/index";
 import {useNavigate} from "react-router-dom";
 
 
 const Wash=({values})=>{
-    console.log(values);
+    if (values === undefined){
+        values = {available:true,washerId:'test',washerType:'washer'};
+    }
     const setWasher = (Id)=>{
         localStorage.setItem("washerId",Id);
     };
@@ -15,7 +17,7 @@ const Wash=({values})=>{
     return(
         <S.Container className={values.available ? 'available' : ''} onClick={()=>{
             setWasher(values.washerId);
-            navigate(values.available ? '/time' : '/');}}>
+            navigate(values.available ? '/time' : '/main');}}>
             <S.Textbox>
                 {values.washerId}
                 <br/>
