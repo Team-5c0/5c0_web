@@ -14,7 +14,6 @@ const NumBtn=({setText})=>{
     return(
         <S.Wrapper >
             <Num btnText='clear' setText={setText}/>
-            <Num btnText='0' setText={setText}/>
             <Num btnText='1' setText={setText}/>
             <Num btnText='2' setText={setText}/>
             <Num btnText='3' setText={setText}/>
@@ -24,6 +23,7 @@ const NumBtn=({setText})=>{
             <Num btnText='7' setText={setText}/>
             <Num btnText='8' setText={setText}/>
             <Num btnText='9' setText={setText}/>
+            <Num btnText='0' setText={setText}/>
             <Num btnText='enter' setText={setText}/>
         </S.Wrapper>
 

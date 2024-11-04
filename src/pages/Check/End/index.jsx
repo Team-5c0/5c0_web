@@ -4,10 +4,28 @@ import {useNavigate} from "react-router-dom";
 
 const EndPage = () => {
     const navigate = useNavigate();
+    const washerId = localStorage.getItem("washerId");
+    const userId = localStorage.getItem("userId");
+    const washMinutes = localStorage.getItem("washMinutes");
+
+    useEffect(() => {
+        axios.post(`/wash/usewasher`,null,{
+            params: {
+                washerId: washerId,
+                userId: userId,
+                washMinutes: washMinutes,
+            }
+        }).then(res => {
+            console.log(res);
+        }).catch(error => {
+            console.log(error);
+        })
+    });
+
     useEffect(() => {
         const timer = setTimeout(() => {
             navigate('/');
-        }, 3000);
+        }, 1500);
         return () => clearTimeout(timer);
     }, [navigate]);
     return (

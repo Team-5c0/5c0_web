@@ -1,6 +1,6 @@
 import React from 'react';
-import * as S from './styles';
-import Wash from "../../components/Wash/Wash";
+import * as S from './style';
+import Wash from "../../components/Wash";
 import {useNavigate} from "react-router-dom";
 
 

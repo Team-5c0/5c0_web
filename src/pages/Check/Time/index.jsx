@@ -1,49 +1,25 @@
 import React from "react";
-import * as S from "./styles";
-import NumBtn from "../../../components/NumBtn/NumBtn";
-import {useState} from "react";
-import {useNavigate} from "react-router-dom";
+import * as S from "./style";
+import useText from "../../../hooks/useText";
+import NumPad from "../../../components/NumPad";
+import Step from "../../../components/Step";
 
 
 const TimePage = () => {
-    const [text, setText] = useState('(분 단위로 입력)');
-    const navigate = useNavigate();
-    const Texting = (e) => {
-        let data = text + e
-        console.log(text)
-
-        if (e === 'clear') {
-            data = ''
-        }
-        if (data.length > 3) {
-            data = text
-        }
-        if (data.length === 0) {
-            data = '(분 단위로 입력)'
-        }
-        else if (data === '(분 단위로 입력)') {
-            data = e==='enter' ? '(분 단위로 입력)' : e
-        }
-        if(e === 'enter' && text !== '(분 단위로 입력)' && text !=='0') {
-            const time = Number(text)
-            navigate("/name");
-        }
-        setText(data);
-    }
+    const text = useText('(분 단위로 입력)', 3, '/name','washMinutes');
 
     return (
         <S.Wrapper>
-            <S.Container>
+            <S.ContentContainer>
+                <Step step={2}/>
                 <S.Text>
                     세탁기 사용할 시간
                 </S.Text>
-                <S.InputBox>
-                    <S.InputBoxText>
-                        {text}
-                    </S.InputBoxText>
-                </S.InputBox>
-                <NumBtn setText={Texting}/>
-            </S.Container>
+            </S.ContentContainer>
+            <S.NumPadContainer>
+                <NumPad value={text.text} setValue={text.texting} />
+            </S.NumPadContainer>
+>>>>>>> Stashed changes
         </S.Wrapper>
     )
 }
