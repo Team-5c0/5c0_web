@@ -3,8 +3,7 @@ import * as S from "./style";
 import useText from "../../../hooks/useText";
 import NumPad from "../../../components/NumPad";
 import Step from "../../../components/Step";
-// import NumBtn from "../../../components/NumBtn/NumBtn";
-// import NumDsp from "../../../components/NumDsp/NumDsp";
+
 
 const NamePage = () => {
     const text = useText('(학번으로 입력)',4, '/end', 'userId');
@@ -24,5 +23,3 @@ const NamePage = () => {
     )
 }
 export default NamePage;
-
-// }

@@ -19,7 +19,9 @@ const Wash=({values})=>{
             setWasher(values.washerId);
             navigate(values.available ? '/time' : '/main');}}>
             <S.Textbox>
-                {text}
+                {values.washerId}
+                <br/>
+                {values.washerType}
             </S.Textbox>
         </S.Container>
     )

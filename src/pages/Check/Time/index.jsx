@@ -19,7 +19,6 @@ const TimePage = () => {
             <S.NumPadContainer>
                 <NumPad value={text.text} setValue={text.texting} />
             </S.NumPadContainer>
->>>>>>> Stashed changes
         </S.Wrapper>
     )
 }
