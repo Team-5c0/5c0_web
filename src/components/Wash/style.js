@@ -17,6 +17,7 @@ export const Container = styled.div`
         background-color: rgba(0, 0, 0, 0.5);
         color: #ffffff;
     }
+    
 `
 export const Textbox = styled.span`
     font-family: "Pretendard-Medium",sans-serif;

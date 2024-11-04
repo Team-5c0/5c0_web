@@ -1,12 +1,15 @@
 import React, {useEffect} from "react";
 import * as S from "./styles";
 import {useNavigate} from "react-router-dom";
+import axios from "axios";
 
 const EndPage = () => {
     const navigate = useNavigate();
     const washerId = localStorage.getItem("washerId");
     const userId = localStorage.getItem("userId");
     const washMinutes = localStorage.getItem("washMinutes");
+
+    // console.log(washerId,washMinutes);
 
     useEffect(() => {
         axios.post(`/wash/usewasher`,null,{

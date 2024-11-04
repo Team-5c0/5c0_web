@@ -7,7 +7,6 @@ import Step from "../../../components/Step";
 
 const NamePage = () => {
     const text = useText('(학번으로 입력)',4, '/end', 'userId');
-
     return (
         <S.Wrapper>
             <S.ContentContainer>

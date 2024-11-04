@@ -1,13 +1,17 @@
 import styled from 'styled-components'
 import '../../index.css'
 
+
 export const Wrapper = styled.div`
+    width: 100%;
+
+`
+export const Container = styled.div`
     //width: 100%;
     height: 10vw;
     display: flex;
     align-items: center;
     justify-content: center;
-
 `
 export const Textbox = styled.div`
     border: #000000 1px solid;

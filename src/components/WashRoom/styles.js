@@ -1,5 +1,5 @@
 import styled from "styled-components";
-export const All = styled.body`
+export const All = styled.div`
   width: 95vw;
   height: 80vh;
   display: grid;
@@ -15,4 +15,8 @@ export const Box = styled.div`
   justify-content: center;
   align-items: center;
   font-size: 2em;
+
+  &.active {
+    background-color: green;
+  }
 `;
