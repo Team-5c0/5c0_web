@@ -17,7 +17,7 @@ const MainPage = () => {
                 const response = await axios.get(`/wash/washers`, {
                     params: {roomid: roomId}
                 });
-                setWashers([response.data])
+                setWashers(response.data);
 
             } catch (error) {
                 console.log(error);
@@ -44,9 +44,8 @@ const MainPage = () => {
                     navigate('/adminPW')}}>사용할 세탁기</S.Title>
             </S.TitleContainer>
             <S.WashContainer>
-                <Wash/>
                 {washers.map((washer,index) => (
-                    <Wash key={index} values={washer[0]}/>
+                    <Wash key={index} washer={washer} />
                 ))}
 
             </S.WashContainer>
