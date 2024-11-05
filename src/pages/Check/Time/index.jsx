@@ -6,7 +6,7 @@ import Step from "../../../components/Step";
 
 
 const TimePage = () => {
-    const text = useText('(분 단위로 입력)', 3, '/name','washMinutes');
+    const text = useText('(분 단위로 입력)', 3, '/name','washMinutes', true);
 
     return (
         <S.Wrapper>

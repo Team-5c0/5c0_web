@@ -14,7 +14,7 @@ export const WashContainer = styled.div`
     display: grid;
     justify-content: center;
     align-items: center;
-    grid-template-columns: repeat(auto-fit, minmax(30%,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(40%,1fr));
     margin: 10%;
     
     grid-gap: 1em

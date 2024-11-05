@@ -3,25 +3,24 @@ import * as S from './style';
 // import {GlobalStyle} from "../../../public/index";
 import {useNavigate} from "react-router-dom";
 
-
-const Wash=({values})=>{
-    if (values === undefined){
-        values = {available:true,washerId:'test',washerType:'washer'};
+const Wash=({washer})=>{
+    const navigate = useNavigate();
+    if (!(washer)){
+        washer = {available:true,washerId:'error',washerType:'undefined'};
     }
     const setWasher = (Id)=>{
         localStorage.setItem("washerId",Id);
     };
-    const navigate = useNavigate();
 
 
     return(
-        <S.Container className={values.available ? 'available' : ''} onClick={()=>{
-            setWasher(values.washerId);
-            navigate(values.available ? '/time' : '/main');}}>
+        <S.Container className={washer.available ? 'available' : ''} onClick={()=>{
+            setWasher(washer.washerId);
+            navigate(washer.available ? '/time' : '/main');}}>
             <S.Textbox>
-                {values.washerId}
+                {washer.washerId}
                 <br/>
-                {values.washerType}
+                {washer.washerType}
             </S.Textbox>
         </S.Container>
     )
