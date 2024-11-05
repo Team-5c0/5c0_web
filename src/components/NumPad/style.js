@@ -9,25 +9,25 @@ export const Wrapper = styled.div`
     backdrop-filter: blur(35px);
     overflow: hidden;
 `
-export const DisplayContainer = styled.div`
-    display: flex;
-    padding-top: 10px;
-    justify-content: center;
-    align-items: center;
-`
-export const Display = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-`
-export const DisplayText = styled.span`
-    font-size: 3em;
-    font-family: Pretendard-Medium,sans-serif;
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
-
-`
+// export const DisplayContainer = styled.div`
+//     display: flex;
+//     padding-top: 10px;
+//     justify-content: center;
+//     align-items: center;
+// `
+// export const Display = styled.div`
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+// `
+// export const DisplayText = styled.span`
+//     font-size: 3em;
+//     font-family: Pretendard-Medium,sans-serif;
+//     text-align: center;
+//     padding-top: 20px;
+//     padding-bottom: 20px;
+//
+// `
 export const NumberContainer = styled.div`
     width: 100%;
     //height: 10%;

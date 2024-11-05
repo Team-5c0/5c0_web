@@ -16,12 +16,9 @@ const Box = ({value, setValue}) => {
 //     )
 // }
 
-const NumPad = ({value,setValue,length}) => {
+const NumPad = ({setValue}) => {
     return (
         <S.Wrapper>
-            <S.DisplayContainer>
-                <S.DisplayText>{value}</S.DisplayText>
-            </S.DisplayContainer>
             <S.NumberContainer>
                 <Box value='1' setValue={setValue}/>
                 <Box value='2' setValue={setValue}/>
