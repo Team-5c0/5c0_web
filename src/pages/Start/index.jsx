@@ -1,27 +1,30 @@
-import React from 'react';
-import * as s from './style';
-import {useNavigate} from 'react-router-dom';
+import React from "react";
+import * as s from "./style";
+import { useNavigate } from "react-router-dom";
 
 const StartPage = () => {
-    const navigate = useNavigate();
-    const go = () => {
-        navigate('/main');
-    }
-    return (
+  const navigate = useNavigate();
+  const go = () => {
+    navigate("/main");
+  };
+  return (
+    <>
+      <s.All>
         <s.Wrapper>
-            <s.ContainerTitle>
-                <s.Title>
-                    안녕하세요 👋
-                </s.Title>
-
-                <s.Button onClick={go}>
-                    <s.ButtonText>
-                        시작하기
-                    </s.ButtonText>
-                </s.Button>
-            </s.ContainerTitle>
-            <s.Circle3/>
+          <s.Title>
+            <s.TitleContainer>
+              슬기로운 세탁생활
+              <s.Introduce>세탁시작 후 시간 확인하고 입력해주세요</s.Introduce>
+            </s.TitleContainer>
+          </s.Title>
+          <s.Footer>
+            <s.Button onClick={go}>
+              <s.ButtonTxt>Enter⏎</s.ButtonTxt>
+            </s.Button>
+          </s.Footer>
         </s.Wrapper>
-    )
-}
-export default StartPage
+      </s.All>
+    </>
+  );
+};
+export default StartPage;
