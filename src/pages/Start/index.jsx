@@ -1,27 +1,24 @@
-import React from 'react';
-import * as s from './style';
-import {useNavigate} from 'react-router-dom';
+import React from "react";
+import * as s from "./style";
+import { useNavigate } from "react-router-dom";
 
 const StartPage = () => {
-    const navigate = useNavigate();
-    const go = () => {
-        navigate('/main');
-    }
-    return (
-        <s.Wrapper>
-            <s.ContainerTitle>
-                <s.Title>
-                    안녕하세요 👋
-                </s.Title>
+  const navigate = useNavigate();
+  const go = () => {
+    navigate("/main");
+  };
 
-                <s.Button onClick={go}>
-                    <s.ButtonText>
-                        시작하기
-                    </s.ButtonText>
-                </s.Button>
-            </s.ContainerTitle>
-            <s.Circle3/>
-        </s.Wrapper>
-    )
-}
-export default StartPage
+  return (
+    <>
+      <s.All>
+        <s.Title>
+          <s.StImg></s.StImg>
+        </s.Title>
+        <s.BtnContainer>
+          <s.NextBtn onClick={go}>시작하기</s.NextBtn>
+        </s.BtnContainer>
+      </s.All>
+    </>
+  );
+};
+export default StartPage;
