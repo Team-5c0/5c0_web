@@ -3,32 +3,29 @@ import * as S from './style';
 
 const Step = ({step}) => {
 
+    const steps = ['세탁기 선택', '사용 시간 설정', '사용자 확인', '완료'];
+
     return (
         <S.Wrapper>
-            <S.StepContainer>
-                <S.Circle className={step === 1 ? 'active' : ''}/>
-                <S.Text>
-                    세탁기 선택
-                </S.Text>
-            </S.StepContainer>
-            <S.StepContainer>
-                <S.Circle className={step === 2 ? 'active' : ''}/>
-                <S.Text>
-                    사용 시간 설정
-                </S.Text>
-            </S.StepContainer>
-            <S.StepContainer>
-                <S.Circle className={step === 3 ? 'active' : ''}/>
-                <S.Text>
-                    사용자 확인
-                </S.Text>
-            </S.StepContainer>
-            <S.StepContainer>
-                <S.Circle className={step === 4 ? 'active' : ''}/>
-                <S.Text>
-                    완료
-                </S.Text>
-            </S.StepContainer>
+            <S.StatsContainer>
+                {steps.map((value, index) => (
+                    <S.StatContainer>
+                        <S.Line
+                            className={(index === 0 ? 'start' : '') + ' ' + (index <= step-1 ? 'active' : '')}
+                        />
+                        <S.Circle className={index < step-1 ? 'active' : ''}/>
+                    </S.StatContainer>
+                ))}
+            </S.StatsContainer>
+            <S.StepsContainer>
+                {steps.map((value, index) => (
+                    <S.StepContainer key={index}>
+                        <S.Text>
+                            {value}
+                        </S.Text>
+                    </S.StepContainer>
+                ))}
+            </S.StepsContainer>
         </S.Wrapper>
     )
 }
