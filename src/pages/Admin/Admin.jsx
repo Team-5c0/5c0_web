@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import * as S from "./styles";
 import WashRoom from "../../components/WashRoom/WashRoom";
 import { useNavigate } from "react-router-dom";

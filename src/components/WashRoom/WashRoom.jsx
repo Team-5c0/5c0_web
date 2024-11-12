@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import * as S from "./styles";
 import { useState } from "react";
 
@@ -26,7 +26,7 @@ const WashRoom = ({ room }) => {
           <S.Box
             key={index}
             className={state.includes(el.roomid) ? "active" : ""}
-            onClick={() => handleClick(el.roomid)}
+            onClick={() => handleClick(el.roomid) } 
           >
             {el.roomid}
           </S.Box>

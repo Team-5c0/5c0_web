@@ -9,14 +9,15 @@ export const All = styled.div`
 export const Box = styled.div`
   width: fit-contents;
   min-height: fit-content;
-  background-color: lightgray;
+  background-color: #fff;
   margin: 1vw;
   display: grid;
   justify-content: center;
   align-items: center;
   font-size: 2em;
-
+  border-radius: 12px;
   &.active {
-    background-color: green;
+    background-color: #4E4EA0;
+    color: white;
   }
 `;
