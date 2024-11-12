@@ -19,7 +19,6 @@ const Box = ({value, setValue}) => {
 const NumPad = ({setValue}) => {
     return (
         <S.Wrapper>
-            <S.NumberContainer>
                 <Box value='1' setValue={setValue}/>
                 <Box value='2' setValue={setValue}/>
                 <Box value='3' setValue={setValue}/>
@@ -35,8 +34,6 @@ const NumPad = ({setValue}) => {
                 <S.EnterBox onClick={()=>{setValue('enter')}}>
                     <S.BoxText>enter</S.BoxText>
                 </S.EnterBox>
-
-            </S.NumberContainer>
 
         </S.Wrapper>
     )
