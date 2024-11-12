@@ -7,22 +7,16 @@ const StartPage = () => {
   const go = () => {
     navigate("/main");
   };
+
   return (
     <>
       <s.All>
-        <s.Wrapper>
-          <s.Title>
-            <s.TitleContainer>
-              슬기로운 세탁생활
-              <s.Introduce>세탁시작 후 시간 확인하고 입력해주세요</s.Introduce>
-            </s.TitleContainer>
-          </s.Title>
-          <s.Footer>
-            <s.Button onClick={go}>
-              <s.ButtonTxt>Enter⏎</s.ButtonTxt>
-            </s.Button>
-          </s.Footer>
-        </s.Wrapper>
+        <s.Title>
+          <s.StImg></s.StImg>
+        </s.Title>
+        <s.BtnContainer>
+          <s.NextBtn onClick={go}>시작하기</s.NextBtn>
+        </s.BtnContainer>
       </s.All>
     </>
   );

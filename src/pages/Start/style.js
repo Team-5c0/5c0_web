@@ -1,59 +1,48 @@
 import styled from "styled-components";
+import washMain from "../../assets/images/washMain.png";
 
 export const All = styled.div`
   width: 100vw;
   height: 100vh;
-  /* background-image: linear-gradient(-45deg, #f5d1c1, #d1bed7); */
-  /* background-image: linear-gradient(135deg, #56ccf2, #2f80ed); */
-  background-color: #272f55;
-  margin: 0;
-  padding: 0;
+  background-color: #fff;
 `;
-export const Wrapper = styled.div`
-  width: 100%;
-  height: 90%;
+export const boxContainer = styled.div`
+ display: flex;
+`
+export const leftBox = styled.div`
+  width: 50vw;
+  height: 100vw;
+  background-color: #1a2c5b;
 `;
-export const TitleContainer = styled.div`
-  padding: 10%;
+export const rightBox = styled.div`
+  width: 50vw;
+  height: 100vw;
+  background-color: #0b1327;
 `;
 export const Title = styled.span`
-  font-size: 3em;
-  font-weight: 900;
-  color: white;
-  opacity: 0.75;
-`;
-export const TitleColor = styled.div`
-  display: inline;
-`;
-export const Introduce = styled.span`
-  display: block;
-  font-size: 0.43em;
-  margin-top: 10px;
-  font-weight: 350;
-  color: #fff;
-`;
-export const Footer = styled.div`
-  margin-top: 14%;
+  width: 100%;
+  height: 80%;
   display: flex;
-  width: 96%;
-  justify-content: flex-end;
+  justify-content: center;
+  align-items: center;
 `;
-export const Button = styled.div`
+export const StImg = styled.img.attrs({
+  src: washMain,
+  alt: "슬기로운 세탁생활",
+})`
+  width: 45%;
+`;
+
+export const BtnContainer = styled.div`
   display: flex;
+  justify-content: center;
+`;
+export const NextBtn = styled.div`
   width: fit-content;
   height: fit-content;
-  background: rgba(255, 255, 255, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-right-color: rgba(255, 255, 255, 0.1);
-  border-bottom-color: rgba(255, 255, 255, 0.1);
-  /* background-color: #192d5b; */
-  padding: 3% 13%;
-  border-radius: 13px;
-  backdrop-filter: blur(20px);
-  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
-`;
-export const ButtonTxt = styled.span`
-  font-size: 2em;
+  background-color: #4476f3;
   color: #fff;
-  font-weight: 800;
+  font-size: 40px;
+  font-weight: 700;
+  padding: 1% 10%;
 `;
