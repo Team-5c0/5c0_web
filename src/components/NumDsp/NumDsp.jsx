@@ -3,9 +3,9 @@ import * as S from './styles'
 
 const NumDsp = ({text}) => {
     return (
-        <S.InputBox>
+        <S.Wrapper>
             <S.InputBoxText>{text}</S.InputBoxText>
-        </S.InputBox>
+        </S.Wrapper>
     )
 
 }
