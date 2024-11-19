@@ -10,6 +10,11 @@ const AdminPage = () => {
   const navigate = useNavigate();
   const [roomNum, setRoom] = useState([]);
 
+  // const checkAdminPassword = localStorage.getItem("password");
+  // if (checkAdminPassword !== 1111) {
+  //   alert("잘못된 비밀번호를 입력하셨습니다.");
+  //   localStorage.setItem("")
+  // }
   useEffect(() => {
     const roomData = async () => {
       try {
@@ -25,11 +30,11 @@ const AdminPage = () => {
   return (
     <>
       <S.Container>
-        <S.Wrap>
+        <div>
           <S.Font className="active">세탁실</S.Font>
           <WashRoom room={roomNum} />
           <S.Font onClick={() => navigate("/")}>confirm</S.Font>
-        </S.Wrap>
+        </div>
       </S.Container>
     </>
   );
