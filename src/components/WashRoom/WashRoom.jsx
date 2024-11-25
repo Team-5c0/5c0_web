@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import * as S from "./styles";
 import { useState } from "react";
 
@@ -17,7 +17,9 @@ const WashRoom = ({ room }) => {
     // 로컬 스토리지에 저장
     localStorage.setItem("roomId", updatedState.join(","));
   };
-
+  useEffect(() => {
+    state.pop();
+  }, [state]);
   return (
     <>
       <S.All>
