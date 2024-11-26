@@ -11,6 +11,7 @@ const StartPage = () => {
   return (
     <>
       <s.All>
+        <s.GotoAdmin></s.GotoAdmin>
         <s.Title>
           <s.StImg></s.StImg>
         </s.Title>

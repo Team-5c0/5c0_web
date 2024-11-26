@@ -1,8 +1,5 @@
 import React from "react";
 import * as S from "./styles";
-// import NumBtn from "../../components/NumBtn/NumBtn.jsx";
-// import { useState } from "react";
-// import { useNavigate } from "react-router-dom";
 import useText from "../../hooks/useText.js";
 import NumPad from "../../components/NumPad/index.jsx";
 const AdminPw = () => {
@@ -33,19 +30,14 @@ const AdminPw = () => {
   //   }
   //   setText(data);
   // };"
-  const numTxt = useText("비밀번호 입력", 4, "/admin", "password");
-  // if(numTxt.text !== password){
-  //   alert("올바르지 않은 비밀번호 입니다.")
-  // }
+  const numTxt = useText("비밀번호 입력", 4, "/admin"); //password
+  const useInputPassword = sessionStorage.setItem("password", numTxt.text)
+  console.log(useInputPassword)
   return (
     <>
       <S.Wrapper>
         <S.Container>
           <S.AdPw>세탁기를 바꾸기 전 비밀번호 입력</S.AdPw>
-          {/* <S.InputBox>
-          <S.InputBoxText>{text}</S.InputBoxText>
-        </S.InputBox> */}
-          {/* <NumBtn setText={Texting} /> */}
           <NumPad value={numTxt.text} setValue={numTxt.texting}></NumPad>
         </S.Container>
       </S.Wrapper>

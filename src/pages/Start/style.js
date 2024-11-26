@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import washMain from "../../assets/images/washMain.png";
+import GoAdmin from "../../assets/images/GoAdmin.png";
 
 export const All = styled.div`
   width: 100vw;
@@ -34,7 +35,16 @@ export const StImg = styled.img.attrs({
   width: 50%;
   user-select: none;
 `;
-
+export const GotoAdmin = styled.img.attrs({
+  src: GoAdmin,
+  alt: "세탁실 가기",
+})`
+  width: 65px;
+  height: 80px;
+  display: flex;
+  padding-left: 95%;
+  padding-top: 10px;
+`;
 export const BtnContainer = styled.div`
   display: flex;
   justify-content: center;
