@@ -31,9 +31,9 @@ const NumPad = ({setValue}) => {
                 <Box value='clear' setValue={setValue}/>
                 <Box value='0' setValue={setValue}/>
                 <Box value='back' setValue={setValue}/>
-                <S.EnterBox onClick={()=>{setValue('enter')}}>
-                    <S.BoxText>enter</S.BoxText>
-                </S.EnterBox>
+                {/*<S.EnterBox onClick={()=>{setValue('enter')}}>*/}
+                {/*    <S.BoxText>enter</S.BoxText>*/}
+                {/*</S.EnterBox>*/}
 
         </S.Wrapper>
     )

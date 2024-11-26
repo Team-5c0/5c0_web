@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-    width: 360px;
     display: grid;
     //gap: 10px;
     //border-radius: 25px;
@@ -34,12 +33,12 @@ export const Wrapper = styled.div`
 //
 // `
 export const Box = styled.div`
-    width: 100px;
-    margin: 10px;
+    width: 125px;
+    margin: 5px;
     aspect-ratio: 1/1;
     border-radius: 15px;
-    box-shadow: -5px -5px 10px 1px rgba(0, 0, 0, 0.1) inset;
-    background-color: rgba(255, 255, 255, 0.05);
+    box-shadow: -2px -2px 5px 1px rgba(0, 0, 0, 0.5) inset;
+    background-color: rgba(255, 255, 255, 1);
     transition: transform 0s, box-shadow 0.2s;
     color: black;
     user-select: none;
@@ -48,7 +47,7 @@ export const Box = styled.div`
     justify-content: center;
     align-items: center;
     &:active {
-        box-shadow: -5px -5px 5px 1px rgba(0, 0, 0, 0.1); /* active 시 그림자를 줄여 눌리는 효과 */
+        box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.5) inset; /* active 시 그림자를 줄여 눌리는 효과 */
         transform: translateY(2px); /* active 시 살짝 내려가면서 눌리는 느낌 */
     }
 
@@ -67,6 +66,7 @@ export const EnterBox = styled(Box)`
 `
 
 export const BoxText = styled.span`
-    font-family: Pretendard-Medium,sans-serif;
-    font-size: 200%;
+    font-family: pretendard-Medium,sans-serif;
+    font-weight: bolder;
+    font-size: 250%;
 `

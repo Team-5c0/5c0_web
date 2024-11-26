@@ -1,27 +1,22 @@
 import React from "react";
 import * as S from './style';
 // import {GlobalStyle} from "../../../public/index";
-import {useNavigate} from "react-router-dom";
 
-const Wash=({washer})=>{
-    const navigate = useNavigate();
-    if (!(washer)){
-        washer = {available:true,washerId:'error',washerType:'undefined'};
-    }
+const Wash=({washer = {available:true,washerId:1,washerType:'undefined'}, selectedWasher, setSelectedWasher})=>{
     const setWasher = (Id)=>{
         localStorage.setItem("washerId",Id);
     };
 
 
     return(
-        <S.Container className={washer.available ? 'available' : ''} onClick={()=>{
-            setWasher(washer.washerId);
-            navigate(washer.available ? '/time' : '/main');}}>
+        <S.Container className={!washer.available ? '' : selectedWasher===washer.washerId ? 'selected' :  'available' } onClick={()=>{
+            if (washer.available) {
+                setWasher(washer.washerId);
+                setSelectedWasher(washer.washerId);}}}>
             <S.Textbox>
-                {washer.washerId}
-                <br/>
-                {washer.washerType}
+                {washer.washerType === 'WASHER' ? '세탁기' : '건조기'}
             </S.Textbox>
+            <S.Available>사용중</S.Available>
         </S.Container>
     )
 }

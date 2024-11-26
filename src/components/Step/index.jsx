@@ -3,17 +3,17 @@ import * as S from './style';
 
 const Step = ({step}) => {
 
-    const steps = ['세탁기 선택', '사용 시간 설정', '사용자 확인', '완료'];
+    const steps = ['시작','세탁기 선택', '사용 시간', '사용자 확인', '완료'];
 
     return (
         <S.Wrapper>
             <S.StatsContainer>
                 {steps.map((value, index) => (
-                    <S.StatContainer>
+                    <S.StatContainer key={index}>
                         <S.Line
-                            className={(index === 0 ? 'start' : '') + ' ' + (index <= step-1 ? 'active' : '')}
+                            className={(index === 0 ? 'start' : '') + ' ' + (index <= step ? 'active' : '')}
                         />
-                        <S.Circle className={index < step-1 ? 'active' : ''}/>
+                        <S.Circle className={index < step ? 'active' : ''}/>
                     </S.StatContainer>
                 ))}
             </S.StatsContainer>
