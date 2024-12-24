@@ -1,14 +1,14 @@
 import styled from "styled-components";
 
-const InActive = "#aaaaaa";
-const Active = "#4caf50";
+const InActive = "#ffffff";
+const Active = "#A0B3FF";
 
 export const Wrapper = styled.div`
     width: 100%;
     height: 25%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    //justify-content: center;
     align-items: center;
 `
 export const StepsContainer = styled.div`
@@ -18,7 +18,7 @@ export const StepsContainer = styled.div`
        margin-bottom: 20px;
 `
 export const StepContainer = styled.div`
-    width: 25%;
+    width: 20%;
     display: flex;
     justify-content: center;
 `
@@ -39,7 +39,8 @@ export const Circle = styled.div`
 `
 export const Text = styled.span`
     font-family: Pretendard-Medium, sans-serif;
-    font-size: 1.5rem;
+    font-size: 1rem;
+    color: white;
     
 `
 
