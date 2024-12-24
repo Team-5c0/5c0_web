@@ -9,7 +9,7 @@ import Header from "../../../components/Header";
 
 
 const TimePage = () => {
-    const text = useText('', 3,'washMinutes', true);
+    const text = useText('', 'time');
     return (
         <S.Wrapper>
             <Header/>
@@ -25,7 +25,7 @@ const TimePage = () => {
             <S.NumPadContainer>
                 <NumPad value={text.text} setValue={text.texting} />
             </S.NumPadContainer>
-            <PageController page={'/name'} active={text.active}/>
+            <PageController page={'/name'} active={text.active} error={text.error}/>
         </S.Wrapper>
     )
 }

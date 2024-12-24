@@ -52,7 +52,7 @@ const MainPage = () => {
                     <Wash key={index} washer={washer} selectedWasher={selectedWasher} setSelectedWasher={setSelectedWasher} />
                 ))}
             </S.WashContainer>
-            <PageController page={'/time'} active={selectedWasher}/>
+            <PageController page={'/time'} active={selectedWasher} error='선택된 기기가 없습니다'/>
         </S.Wrapper>
     )
 }

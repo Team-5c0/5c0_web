@@ -9,7 +9,7 @@ import Header from "../../../components/Header";
 
 
 const NamePage = () => {
-    const text = useText('',4, 'userId' );
+    const text = useText('','name');
     return (
         <S.Wrapper>
             <Header/>
@@ -25,7 +25,7 @@ const NamePage = () => {
             <S.NumPadContainer>
                 <NumPad value={text.text} setValue={text.texting}/>
             </S.NumPadContainer>
-            <PageController page={'/end'} active={text.active}/>
+            <PageController page={'/end'} active={text.active} error={text.error}/>
         </S.Wrapper>
     )
 }

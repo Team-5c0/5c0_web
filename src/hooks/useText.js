@@ -1,29 +1,30 @@
 import { useState } from "react";
 
-const useText = (value = '', length = 0, saveAs = 'userId', time = false ) => {
-    const [text, setText] = useState(value);
+const useText = (value = '', type = 'time') => {
+    const [text, setText] = useState(value || '0');
     const [active, setActive] = useState(false);
-    const [error, setError] = useState('');
-    const texting = (e) => {
-        let data = text + e
+    const error = type === 'time' ? '시간을 입력하여 주세요' : '학번을 전부 입력하여 주세요';
 
-        if (e === 'clear') {
-            data = '';
-            setError('값은 입력하셔야 합니다')}
-        if (e === 'back') {data = text.substring(0,text.length-1)}
-        if (time) {data = Number(data).toString();setError('최소 1분 이상이어야 합니다')}
-        else {setError('학번 네자리를 입력하셔야 합니다.')}
-        if (data.length > length) {data = text}
-        if(data.length === length) {
-            localStorage.setItem(saveAs,data);
-            setActive(true);
+    const texting = (e) => {
+        if (e === 'back') {
+            setText(text.slice(0, -1) || '0'); // 마지막 문자 제거
+            setActive(false);
+        } else if (e === 'clear') {
+            setText(value || '0'); // 초기 값으로 리셋
+            setActive(false);
+        } else {
+            const input = parseInt((text.toString() || '') + e, 10) || 0;
+            if (type === 'time') {
+                if (input > 0 && input < 1000) setActive(true);
+                setText(input >= 999 ? '999' : input.toString());
+            } else {
+                if (input.toString().length === 4) setActive(true);
+                setText(input.toString());
+            }
         }
-        else if (time && Number(data) > 0 ) {
-            localStorage.setItem(saveAs,data);
-            setActive(true);
-        }
-        setText(data);
-    }
-    return {text,length,texting,active,error};
-}
+    };
+
+    return { text, texting, active, error };
+};
+
 export default useText;

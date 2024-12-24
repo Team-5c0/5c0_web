@@ -11,18 +11,16 @@ const useWashing = () => {
     const washMinutes = getValue("washMinutes");
 
     const postData = () => {
-        return axios.post(`/wash/usewasher`, null, {
+        axios.post(`/wash/usewasher`, null, {
             params: {
                 washerId: washerId,
                 userId: userId,
                 washMinutes: washMinutes,
             }
-        }).then(res => {
+        }).then(() => {
             setDone(true);
-            return res.status;
         }).catch(err => {
             console.log(err.status);
-            return err.status;
         });
     }
 

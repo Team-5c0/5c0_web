@@ -1,7 +1,7 @@
 import React from 'react';
 import * as S from './style';
 
-const NumPadDsp = ({value= '',len = 4, placeholder = ''}) => {
+const NumPadDsp = ({value= '',len = 4, placeholder=''}) => {
     const valueArray = Array(len).fill(0).map((element,index) => {
         if (len - index <= value.length) {
             return value[index - len + value.length];
@@ -16,8 +16,7 @@ const NumPadDsp = ({value= '',len = 4, placeholder = ''}) => {
                 {valueArray.map((item, index) => (
                     <S.ValueText key={index}>{item}</S.ValueText>
                 ))}
-                {placeholder ? <S.Value>{placeholder}</S.Value> : null}
-
+                {placeholder ? <S.ValueText>{placeholder}</S.ValueText> : null}
             </S.TextContainer>
 
             <S.Line/>
