@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import washMain from "../../assets/images/washMain.png";
-import GoAdmin from "../../assets/images/GoAdmin.png";
 
 export const All = styled.div`
   width: 100vw;
