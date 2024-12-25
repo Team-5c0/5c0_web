@@ -1,40 +1,28 @@
 import React, {useEffect} from "react";
-import * as S from "./styles";
+import * as S from "./style";
 import {useNavigate} from "react-router-dom";
-import axios from "axios";
+import Step from "../../../components/Step";
+import Header from "../../../components/Header";
 
 const EndPage = () => {
     const navigate = useNavigate();
-    const washerId = localStorage.getItem("washerId");
-    const userId = localStorage.getItem("userId");
-    const washMinutes = localStorage.getItem("washMinutes");
-
-    // console.log(washerId,washMinutes);
-
-    useEffect(() => {
-        axios.post(`/wash/usewasher`,null,{
-            params: {
-                washerId: washerId,
-                userId: userId,
-                washMinutes: washMinutes,
-            }
-        }).then(res => {
-            console.log(res);
-        }).catch(error => {
-            console.log(error);
-        })
-    });
-
     useEffect(() => {
         const timer = setTimeout(() => {
             navigate('/');
         }, 1500);
         return () => clearTimeout(timer);
     }, [navigate]);
+
     return (
         <S.Wrapper>
-            <S.Content>완료</S.Content>
+            <Header/>
+            <S.ValueContainer>
+                <Step step={5}/>
+                <S.CheckIcon>✓</S.CheckIcon>
+                <S.Content>사용자 설정이 완료되었습니다</S.Content>
+            </S.ValueContainer>
         </S.Wrapper>
     )
 }
 export default EndPage;
+

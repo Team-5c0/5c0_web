@@ -9,16 +9,14 @@ const StartPage = () => {
   };
 
   return (
-    <>
-      <s.All>
-        <s.Title>
-          <s.StImg></s.StImg>
-        </s.Title>
-        <s.BtnContainer>
-          <s.NextBtn onClick={go}>시작하기</s.NextBtn>
-        </s.BtnContainer>
-      </s.All>
-    </>
+    <s.All>
+      <s.Title>
+        <s.StImg></s.StImg>
+      </s.Title>
+      <s.BtnContainer>
+        <s.NextBtn onClick={go}>시작하기</s.NextBtn>
+      </s.BtnContainer>
+    </s.All>
   );
 };
 export default StartPage;

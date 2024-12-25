@@ -16,13 +16,9 @@ const Box = ({value, setValue}) => {
 //     )
 // }
 
-const NumPad = ({value,setValue,length}) => {
+const NumPad = ({setValue}) => {
     return (
         <S.Wrapper>
-            <S.DisplayContainer>
-                <S.DisplayText>{value}</S.DisplayText>
-            </S.DisplayContainer>
-            <S.NumberContainer>
                 <Box value='1' setValue={setValue}/>
                 <Box value='2' setValue={setValue}/>
                 <Box value='3' setValue={setValue}/>
@@ -35,11 +31,9 @@ const NumPad = ({value,setValue,length}) => {
                 <Box value='clear' setValue={setValue}/>
                 <Box value='0' setValue={setValue}/>
                 <Box value='back' setValue={setValue}/>
-                <S.EnterBox onClick={()=>{setValue('enter')}}>
-                    <S.BoxText>enter</S.BoxText>
-                </S.EnterBox>
-
-            </S.NumberContainer>
+                {/*<S.EnterBox onClick={()=>{setValue('enter')}}>*/}
+                {/*    <S.BoxText>enter</S.BoxText>*/}
+                {/*</S.EnterBox>*/}
 
         </S.Wrapper>
     )

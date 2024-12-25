@@ -3,19 +3,36 @@ import styled from "styled-components";
 export const Container = styled.div`
     width: 100%;
     height: 10vw;
-    border: #000000 1px solid;
-    background-color: rgba(205, 92, 92, 0.75);
-    color: #000000;
+    box-shadow: -2px -2px 5px 1px rgba(0, 0, 0, 0.5) inset;
+    background-color: rgba(255, 255, 255, 0.75);
     border-radius: 10px;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    cursor: pointer;
+    p {
+        display: block;
+    }
     &.available {
-        background-color: rgba(103, 165, 111, 0.75);
+        background-color: white;
+        color: black;
+        p {
+            display: none;
+        }
+    }
+    &.selected {
+        background-color: #A0B3FF;
+        color: white;
+        p {
+            display: none;
+        }
+        
     }
 
     &:active {
-        background-color: rgba(0, 0, 0, 0.5);
-        color: #ffffff;
+        box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.5) inset; /* active 시 그림자를 줄여 눌리는 효과 */
+        transform: translateY(2px); /* active 시 살짝 내려가면서 눌리는 느낌 */
     }
     
 `
@@ -25,5 +42,9 @@ export const Textbox = styled.span`
     font-size: 3vw;
     text-align: center;
     user-select: none;
+    //color: white;
     
+`
+export const Available = styled.p`
+    text-align: center;
 `
