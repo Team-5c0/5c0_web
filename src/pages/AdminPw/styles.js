@@ -1,33 +1,37 @@
 import styled from "styled-components";
 
-
 export const Wrapper = styled.div`
-     width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-  `;
-
-export const Container = styled.div`
-    width: 100%;
-    margin: 10px;
-`
-
-export const InputBox = styled.div`
-    border: 1px solid #000000;
-    padding: 5%;
-    text-align: center;
+  background-image: linear-gradient(90deg, #1a2d5b, #0b1328);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
 `;
-
+export const Container = styled.div`
+  width: 100%;
+  margin: 10px;
+`;
 export const InputBoxText = styled.span`
-    font-family: Pretendard-Medium,sans-serif;
-    font-size: 3em;
-    user-select: none;
-    padding: 4%;
+  font-family: Pretendard-Medium, sans-serif;
+  font-size: 3em;
+  user-select: none;
+  padding: 4%;
 `;
 export const AdPw = styled.div`
-text-align: center;
-    font-family: Pretendard-Medium,sans-serif;
-    font-size: 3.5em;
-    margin-bottom: 5%;
+  text-align: center;
+  font-family: Pretendard-Medium, sans-serif;
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: #fff;
 `;
+export const NumPadContainer = styled.div`
+  width: fit-content;
+  height: min-content;
+`;
+export const ContentContainer = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+export const KeypadContainer = styled.div`
+  display: flex;
+`

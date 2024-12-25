@@ -1,24 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import * as S from "./styles";
 import { useState } from "react";
 
 const WashRoom = ({ room }) => {
-  const [state, setState] = useState([]); //roomid의 상태를 관리하는 useState
-
+  const [state, setState] = useState([]); 
   const handleClick = (roomid) => {
-    const isSelected = state.includes(roomid); //배열의 항목에 특정 값이 포함되어 있는지를 판단 state.includes
-    //포함되어 있으면 선택 해제 (배열에서 제거), 그렇지 않으면 배열에 추가
-    const updatedState = isSelected //선택된 roomid를 updatedState에 포함시킨다
-      ? state.filter((id) => id !== roomid) //선택 해제할 때 roomid를 제외한 새로운 배열 생성
-      : [...state, roomid]; //선택할 때: 기존 배열에 roomid추가
+    const isSelected = state.includes(roomid); 
 
-    // 상태 업데이트
+    const updatedState = isSelected 
+      ? state.filter((id) => id !== roomid) 
+      : [...state, roomid]; 
     setState(updatedState);
-
-    // 로컬 스토리지에 저장
     localStorage.setItem("roomId", updatedState.join(","));
   };
-
+  useEffect(() => {
+    state.pop();
+  }, [state]);
   return (
     <>
       <S.All>

@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import * as S from "./styles";
 import WashRoom from "../../components/WashRoom/WashRoom";
 import { useNavigate } from "react-router-dom";
@@ -9,7 +9,6 @@ import axios from "axios";
 const AdminPage = () => {
   const navigate = useNavigate();
   const [roomNum, setRoom] = useState([]);
-
   useEffect(() => {
     const roomData = async () => {
       try {
@@ -21,15 +20,14 @@ const AdminPage = () => {
     };
     roomData();
   }, []);
-
   return (
     <>
       <S.Container>
-        <S.Wrap>
+        <div>
           <S.Font className="active">세탁실</S.Font>
           <WashRoom room={roomNum} />
-          <S.Font onClick={() => navigate("/")}>confirm</S.Font>
-        </S.Wrap>
+          <S.Font onClick={() => navigate("/main")}>confirm</S.Font>
+        </div>
       </S.Container>
     </>
   );
