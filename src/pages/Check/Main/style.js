@@ -45,3 +45,7 @@ export const Title = styled.p`
     color: white;
     cursor: pointer;
 `
+export const Error = styled.span`
+    color: white;
+    font-family: Pretendard-Medium,sans-serif;
+`

@@ -47,4 +47,5 @@ export const NextBtn = styled.div`
   font-weight: 700;
   padding: 1% 10%;
   user-select: none;
+  cursor: pointer;
 `;
