@@ -2,7 +2,7 @@ import axios from "axios";
 import {useState} from "react";
 
 const useWashing = () => {
-    const [done, setDone] = useState(true);
+    const [done, setDone] = useState(false);
     const getValue = (name) => {
         return Number(localStorage.getItem(name));
     }
