@@ -15,10 +15,16 @@ const useText = (value = '', type = 'time') => {
         } else {
             const input = parseInt((text.toString() || '') + e, 10) || 0;
             if (type === 'time') {
-                if (input > 0 && input < 1000) setActive(true);
+                if (input > 0 && input < 1000) {
+                    setActive(true)
+                    localStorage.setItem("washMinutes",input.toString())
+                }
                 setText(input >= 999 ? '999' : input.toString());
             } else {
-                if (input.toString().length === 4) setActive(true);
+                if (input.toString().length === 4) {
+                    setActive(true)
+                    localStorage.setItem("userId",input.toString())
+                }
                 setText(text.length < 4 ? input.toString() : text);
             }
         }
