@@ -11,6 +11,7 @@ const useWashing = () => {
     const washMinutes = getValue("washMinutes");
 
     const postData = () => {
+        setDone(true);
         axios.post(`${process.env.REACT_APP_SERVER_URL}/wash/usewasher`, null, {
             params: {
                 washerId: washerId,
@@ -18,9 +19,9 @@ const useWashing = () => {
                 washMinutes: washMinutes,
             }
         }).then(() => {
-            setDone(true);
         }).catch(err => {
             console.log(err.status);
+            setDone(false);
         });
     }
 
