@@ -12,7 +12,7 @@ const AdminPage = () => {
   useEffect(() => {
     const roomData = async () => {
       try {
-        const response = await axios.get(`${process.env.REACT_APP_SERVER_URL}wash/rooms`);
+        const response = await axios.get(`${process.env.REACT_APP_SERVER_URL}/wash/rooms`);
         setRoom(response.data);
       } catch (error) {
         console.log(error);
