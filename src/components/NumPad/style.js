@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
     display: grid;
-    //gap: 10px;
+    width: 50%;
+    gap: 10px;
     //border-radius: 25px;
     //box-sizing: border-box;
     //box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
@@ -33,8 +34,7 @@ export const Wrapper = styled.div`
 //
 // `
 export const Box = styled.div`
-    width: 125px;
-    margin: 5px;
+    width: 100%;
     aspect-ratio: 1/1;
     border-radius: 15px;
     box-shadow: -2px -2px 5px 1px rgba(0, 0, 0, 0.5) inset;
@@ -68,5 +68,5 @@ export const EnterBox = styled(Box)`
 export const BoxText = styled.span`
     font-family: pretendard-Medium,sans-serif;
     font-weight: bolder;
-    font-size: 250%;
+    font-size: 3vw;
 `

@@ -39,7 +39,7 @@ export const ValueContainer = styled.div`
 export const Title = styled.p`
     text-align: center;
     font-family: Pretendard-Medium, sans-serif;
-    font-size: 3.5em;
+    font-size: 3.5vw;
     margin-top: 5%;
     margin-bottom: 5%;
     color: white;
@@ -48,4 +48,5 @@ export const Title = styled.p`
 export const Error = styled.span`
     color: white;
     font-family: Pretendard-Medium,sans-serif;
+    font-size: 1.5vw;
 `

@@ -39,7 +39,7 @@ export const Circle = styled.div`
 `
 export const Text = styled.span`
     font-family: Pretendard-Medium, sans-serif;
-    font-size: 1rem;
+    font-size: 1.5vw;
     color: white;
     
 `

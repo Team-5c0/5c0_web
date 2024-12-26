@@ -34,7 +34,7 @@ export const NumPadContainer = styled.div`
 export const Title = styled.p`
     text-align: center;
     font-family: Pretendard-Medium,sans-serif;
-    font-size: 3.5em;
+    font-size: 3.5vw;
     margin-top: 5%;
     margin-bottom: 5%;
     color: white;

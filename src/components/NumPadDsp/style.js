@@ -15,7 +15,7 @@ export const TextContainer = styled.div`
 
 export const ValueText = styled.span`
     font-family: Pretendard-Black, sans-serif;
-    font-size: 4rem;
+    font-size: 4vw;
     margin-bottom: 5px;
     color: white;
 `

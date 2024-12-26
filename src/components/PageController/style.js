@@ -20,7 +20,7 @@ export const Icon = styled.img`
 `
 export const ReturnButtonText = styled.span`
     font-family: Pretendard-Medium,sans-serif;
-    font-size: 48px;
+    font-size: 4vw;
     color: white;
 `
 export const NextButton = styled.div`

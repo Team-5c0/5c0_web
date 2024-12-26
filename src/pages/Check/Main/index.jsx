@@ -66,7 +66,7 @@ const MainPage = () => {
                         />
                     ))
                 ) : (
-                    <S.Error>세탁기를 불러올 수 없습니다. 다시 시도해 주세요.</S.Error>
+                    <S.Error>세탁기를 불러올 수 없습니다.<br/> 다시 시도해 주세요.</S.Error>
                 )}
             </S.WashContainer>
             <PageController
