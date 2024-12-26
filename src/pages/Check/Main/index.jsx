@@ -19,7 +19,7 @@ const MainPage = () => {
                 const response = await axios.get(`/wash/washers`, {
                     params: {roomid: roomId}
                 });
-                setWashers(response.data);
+                setWashers(response.data ? response.data : []);
 
             } catch (error) {
                 console.log(error);
