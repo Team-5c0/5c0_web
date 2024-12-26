@@ -2,7 +2,7 @@ import axios from "axios";
 import {useState} from "react";
 
 const useWashing = () => {
-    const [done, setDone] = useState(false);
+    const [done, setDone] = useState(true);
     const getValue = (name) => {
         return Number(localStorage.getItem(name));
     }
@@ -19,6 +19,7 @@ const useWashing = () => {
                 washMinutes: washMinutes,
             }
         }).then(() => {
+            setDone(true);
         }).catch(err => {
             console.log(err.status);
             setDone(false);
