@@ -19,7 +19,7 @@ const useText = (value = '', type = 'time') => {
                 setText(input >= 999 ? '999' : input.toString());
             } else {
                 if (input.toString().length === 4) setActive(true);
-                setText(input.toString());
+                setText(text.length < 4 ? input.toString() : text);
             }
         }
     };

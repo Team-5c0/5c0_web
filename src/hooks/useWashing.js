@@ -11,7 +11,7 @@ const useWashing = () => {
     const washMinutes = getValue("washMinutes");
 
     const postData = () => {
-        axios.post(`/api/wash/usewasher`, null, {
+        axios.post(`${process.env.REACT_APP_SERVER_URL}/wash/usewasher`, null, {
             params: {
                 washerId: washerId,
                 userId: userId,

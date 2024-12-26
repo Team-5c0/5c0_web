@@ -12,7 +12,7 @@ const AdminPage = () => {
   useEffect(() => {
     const roomData = async () => {
       try {
-        const response = await axios.get(`/api/wash/rooms`);
+        const response = await axios.get(`${process.env.REACT_APP_SERVER_URL}/wash/rooms`);
         setRoom(response.data);
       } catch (error) {
         console.log(error);
@@ -26,7 +26,7 @@ const AdminPage = () => {
         <div>
           <S.Font className="active">세탁실</S.Font>
           <WashRoom room={roomNum} />
-          <S.Font onClick={() => navigate("/main")}>confirm</S.Font>
+          <S.Font onClick={() => navigate("/")}>confirm</S.Font>
         </div>
       </S.Container>
     </>
