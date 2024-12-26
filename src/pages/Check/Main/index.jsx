@@ -16,7 +16,7 @@ const MainPage = () => {
         const roomId = localStorage.getItem("roomId"); // 로컬 스토리지에서 세탁실 ID 가져오기
         const fetchData = async () => {
             try {
-                const response = await axios.get(`${process.env.REACT_APP_SERVER_URL}/wash/washers`, {
+                const response = await axios.get(`${process.env.REACT_APP_SERVER_URL}wash/washers`, {
                     params: { roomid: roomId },
                 });
                 const data = response.data;
